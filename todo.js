@@ -50,9 +50,11 @@ function saveInfo(list) {
     expires = "; expires=" + date.toUTCString();
 
     document.cookie = cookieName + '=' + (list || "") + expires + "; path=/";
+    console.log(document.cookie);
 }
 
 function loadInfo(named) {
+    console.log(`Loading`);
     var nameEQ = named + "=";
     var ca = document.cookie.split(';');
     for(let i = 0; i < ca.length;i++){
@@ -60,5 +62,6 @@ function loadInfo(named) {
         while(c.charAt(0) == ' ')c = c.substring(1,c.length);
         if(c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
+    console.log(`Fail`);
     return null;
 }
