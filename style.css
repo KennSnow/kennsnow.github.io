@@ -118,6 +118,16 @@ body{
     border-radius: 10px;
 }
 
+#container .controls #save {
+    background-color: #01aea4;
+    border-radius: 10px;
+}
+
+#contaer .controls #load {
+    background-color: purple;
+    border-radius: 10px;
+}
+
 #container .mycheck {
     opacity: 1;
     border-radius:10px;
